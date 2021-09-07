@@ -9,6 +9,7 @@ const personalMoviesDB = {
     geners: [],
     privat: false
 };
+console.log(personalMoviesDB);
 
 
 const a = prompt('what film are you watshig in last time',''),
