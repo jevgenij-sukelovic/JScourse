@@ -9,15 +9,40 @@ const personalMoviesDB = {
     geners: [],
     privat: false
 };
-console.log(personalMoviesDB.actors);
+if(personalMoviesDB.count<10){
+    console.log('You watshed not many movies');
+}else if(personalMoviesDB.count>=10 || personalMoviesDB<=30){
+console.log('You are classic wiver');
+}else if(personalMoviesDB.count >30){
+    console.log('you are movie-man');
+}else{
+    console.log('error');
+}
 
 
-const a = prompt('what film are you watshig in last time',''),
-       b = prompt('what rate is for this film',''),
-       c = prompt('what film are you watshig in last time', ''),
-       d = prompt('what rate is for this film', '');
+ for(let i = 0; i<2; i++)
+ {
+    let a = prompt('what is the last film you watshed','');
+    let b = prompt('what is the films reting','');
 
-personalMoviesDB.movies[a]=b;
-personalMoviesDB.movies[c]=d;
+    if(a != null && b!=null && a != '' && a.length < 50 &&  b != '' ){
+        personalMoviesDB.movies[a]=b;
+    }else{
+        i--;
+    }
+
+
+ }
+
+
+// const a = prompt('what is the last film you watshed','rembo'),
+//        b = prompt('what is the films reting','9'),
+//        c = prompt('what is the last film you watshed', 'rpobocop'),
+//        d = prompt('what is the films reting', '7');
+
+// personalMoviesDB.movies[a]=b;
+// personalMoviesDB.movies[c]=d;
+
+
 
 console.log(personalMoviesDB);
